@@ -11,7 +11,7 @@ class Matrix:
         return
     def inverse(matrix1)
         return
-    def identity(matrix1)
+    def identity(size)
         return
     def determinant(matrix1)
         return
