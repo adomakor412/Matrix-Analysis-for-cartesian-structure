@@ -1,18 +1,26 @@
 class Matrix:
     def __init__(self):
         return
-    def addMatrices(matrix1,matrix2)
-        [[] for m in len(matrix1)]
+    def addMatrices(self, matrix1, matrix2):
+        myMatrix = [
+            [matrix1[m][n] + matrix2[m][n] for n in range(len(matrix1[m]))]
+            for m in range(len(matrix1))
+        ]
+        return myMatrix
+    def subtractMatrices(self, matrix1, matrix2):
         return
-    def subtractMatrices(matrix1,matrix2)
+    def multiplyMatrices(self, matrix1, matrix2):
         return
-    def multiplyMatrices(matrix1,matrix2)
+    def multiplyMatrix(self, matrix1):
         return
-    def multiplyMatrix(matrix1)
+    def inverse(self, matrix1):
         return
-    def inverse(matrix1)
+    def identity(self, size):
         return
-    def identity(size)
+    def determinant(self, matrix1):
         return
-    def determinant(matrix1)
-        return
+
+classMatrix = Matrix()
+print classMatrix.addMatrices([[1],[2]],[[3],[4]])
+
+
