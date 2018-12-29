@@ -1,4 +1,4 @@
-class Matrix:
+class Matrix: #matrices are lists; scalers are floats
     def __init__(self):
         return
     def addMatrices(self, matrix1, matrix2):
@@ -11,7 +11,7 @@ class Matrix:
         return
     def multiplyMatrices(self, matrix1, matrix2):
         return
-    def multiplyMatrix(self, matrix1):
+    def multiplyMatrix(self, matrix1, scaler):
         return
     def inverse(self, matrix1):
         return
@@ -19,8 +19,5 @@ class Matrix:
         return
     def determinant(self, matrix1):
         return
-
-classMatrix = Matrix()
-print classMatrix.addMatrices([[1],[2]],[[3],[4]])
 
 
