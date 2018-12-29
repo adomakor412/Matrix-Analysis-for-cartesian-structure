@@ -2,6 +2,7 @@ class Matrix:
     def __init__(self):
         return
     def addMatrices(matrix1,matrix2)
+        [[] for m in len(matrix1)]
         return
     def subtractMatrices(matrix1,matrix2)
         return
