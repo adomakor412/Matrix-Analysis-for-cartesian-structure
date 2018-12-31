@@ -51,10 +51,31 @@ class Matrix: #matrices are lists; scalers are floats
         return self.scaleMatrix(adjugate,float(1/det))
 
     def identity(self, size):
-        return
+        return [
+            [0 if m!=n else 1 for n in len(size)]
+            for m in len(size)
+        ]
 
-    def determinant(self, matrix1):
-        return
+    def determinant(self, matrix):
+        '''
+        find determinant by expansion of minors
+        '''
+        myMatrix = matrix
+        if len(myMatrix)==1:
+            return float(1/myMatrix[0][0])
+        
+        mySum = 0
+        columms = range(len(myMatrix[0]))
+        for exp in range(len(myMatrix[0])):#expand along first row
+            minors_1n = [
+                [ myMatrix[m][n] for n in columns[:m]+columns[m+1:] ]
+                for m in range(len(myMatrix))
+            ]
+            mySum+= myMatrix[exp] * ((-1)**exp) * self.determinant(minors_1n)
+        return mySum
     
-    def transform(self, matrix1):
-        return
+    def transform(self, matrix):
+        return [
+            [matrix[n][m] for n in len(matrix)]
+            for m in len(matrix)
+        ]
